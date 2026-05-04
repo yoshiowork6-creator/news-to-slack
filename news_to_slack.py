@@ -5,17 +5,35 @@ import os
 from datetime import datetime, timezone, timedelta
 
 RSS_FEEDS = [
-    {"url": "https://techcrunch.com/feed/",               "label": "TechCrunch"},
-    {"url": "https://feeds.feedburner.com/oreilly/radar", "label": "O'Reilly"},
-    {"url": "https://gigazine.net/news/rss_2.0/",         "label": "Gigazine"},
-    {"url": "https://zenn.dev/feed",                      "label": "Zenn"},
+    # IT・テクノロジー系
+    {"url": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",  "label": "ITmedia NEWS"},
+    {"url": "https://rss.itmedia.co.jp/rss/2.0/business.xml",     "label": "ITmediaビジネス"},
+    {"url": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",       "label": "ITmedia AI+"},
+    {"url": "https://techcrunch.com/feed/",                        "label": "TechCrunch"},
+    {"url": "https://feeds.feedburner.com/oreilly/radar",          "label": "O'Reilly"},
+    {"url": "https://gigazine.net/news/rss_2.0/",                  "label": "Gigazine"},
+    {"url": "https://zenn.dev/feed",                               "label": "Zenn"},
+    # 政治・経済・ビジネス系（無料）
+    {"url": "https://feeds.reuters.com/reuters/JPBusinessNews",    "label": "Reutersビジネス"},
+    {"url": "https://feeds.reuters.com/reuters/JPTopNews",         "label": "Reutersトップ"},
+    {"url": "https://www.bloomberg.co.jp/feeds/bbiz/sitemap.xml",  "label": "Bloomberg日本"},
+    {"url": "https://toyokeizai.net/list/feed/rss",                "label": "東洋経済"},
 ]
 
 FILTER_KEYWORDS = [
-    "AI", "人工知能", "機械学習", "LLM",
-    "経済", "円安", "株価", "インフレ",
-    "政治", "選挙", "政府", "国会",
-    "Python", "セキュリティ", "クラウド",
+    # AI・テクノロジー
+    "AI", "人工知能", "機械学習", "LLM", "生成AI", "ChatGPT", "DX", "デジタル",
+    # 経済・金融（クライアント対話向け）
+    "経済", "円安", "円高", "株価", "日経平均", "インフレ", "金利", "GDP", "景気",
+    "物価", "賃上げ", "賃金", "雇用", "失業率",
+    # ビジネス・経営
+    "ビジネス", "経営", "M&A", "上場", "IPO", "スタートアップ", "投資",
+    "売上", "利益", "業績", "決算",
+    # 政治・社会（クライアント対話向け）
+    "政治", "選挙", "政府", "首相", "内閣", "国会", "規制", "政策", "法律",
+    "貿易", "関税", "米中", "日米", "外交",
+    # IT・セキュリティ
+    "Python", "セキュリティ", "クラウド", "サイバー", "データ",
 ]
 
 HOURS_BACK = 24
