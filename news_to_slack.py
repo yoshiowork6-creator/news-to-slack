@@ -5,8 +5,6 @@ import os
 from datetime import datetime, timezone, timedelta
 
 RSS_FEEDS = [
-    {"url": "https://www3.nhk.or.jp/rss/news/cat6.xml",  "label": "NHK経済"},
-    {"url": "https://www3.nhk.or.jp/rss/news/cat4.xml",  "label": "NHK政治"},
     {"url": "https://techcrunch.com/feed/",               "label": "TechCrunch"},
     {"url": "https://feeds.feedburner.com/oreilly/radar", "label": "O'Reilly"},
     {"url": "https://gigazine.net/news/rss_2.0/",         "label": "Gigazine"},
